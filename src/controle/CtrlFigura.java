@@ -24,55 +24,56 @@ public class CtrlFigura {
             BufferedReader br = new BufferedReader(new FileReader(arguivo)); 
          //varrendo a lista do txt para criar a lista de objetos
             
-                  
-                  
+                int cont=0;
+                int aux=0;
+                array produtos[];
                 while(br.ready()){
-                String linha = br.readLine();
-                String linhaQuebrada[] = linha.split(":");
-          int cont=0;
-          int  id[] = null;
+                    String linha = br.readLine();
+                    String linhaQuebrada[] = linha.split(":");
+/* --------------------------------------------------------------------------------------------------------*/
+                    Protudo produto = new Produto();
+/* --------------------------------------------------------------------------------------------------------*/
+                    /*int  id[] = null;
                   String f[] = null;
                   int  nl[] = null;
                   int  l1[] = null;
                   int  l2[] = null;
                   int l3[] = null;
                   int  l4[] = null;
-                  int l5[] = null;
-                     int aux=0;
+                  int l5[] = null; */
                switch (linhaQuebrada[0]) {
                    
-                    case "ID": 
+                    case "ID":  
                         if(aux==0){
-                              aux=1;
-                          id[cont]=Integer.parseInt(linhaQuebrada[1]); 
-                             
-                        }else{ 
-                           cont++;
-                             id[cont]=Integer.parseInt(linhaQuebrada[1]);
-                            }
-                              break;
+                            aux=1;
+                        }else{
+                            produtos[cont] = produto;
+                            cont++;
+                            Protudo produto = new Produto();
+                        }
+                        produto.id=Integer.parseInt(linhaQuebrada[1]); // não sei se é dessa forma que atribui, mas deve ser
+                        break;
                     case "F": 
-                            f[cont]=linhaQuebrada[1];
-                             break;
+                        produto.f=linhaQuebrada[1];
+                        break;
                     case "NL": 
-                           nl[cont]=Integer.parseInt(linhaQuebrada[1]);
-                             break;
+                        produto.nl=Integer.parseInt(linhaQuebrada[1]);
+                        break;
                     case "L1":
-                      l1[cont]=Integer.parseInt(linhaQuebrada[1]);
+                        produto.l1=Integer.parseInt(linhaQuebrada[1]);
                         break;
                     case "L2": 
-                            l2[cont]=Integer.parseInt(linhaQuebrada[1]);
+                        produto.l2=Integer.parseInt(linhaQuebrada[1]);
                         break;
                     case "L3": 
-                            l3[cont]=Integer.parseInt(linhaQuebrada[1]);
+                        produto.l3=Integer.parseInt(linhaQuebrada[1]);
                         break;
                     case "L4":
-                            l4[cont]=Integer.parseInt(linhaQuebrada[1]);
-                         break;
+                        produto.l4=Integer.parseInt(linhaQuebrada[1]);
+                        break;
                     case "L5":
-                         l5[cont]=Integer.parseInt(linhaQuebrada[1]);
-                   
-                     break;
+                        produto.l5=Integer.parseInt(linhaQuebrada[1]);
+                        break;
                       
                    
                }
@@ -131,21 +132,22 @@ public class CtrlFigura {
                    
                    
                }    
-               
-                   
-                    
-            
-                
-    
-         
-         
-         
-         
-         
              } return listaFiguras;
         }
     }
+/* --------------------------------------------------------------------------------------------------------*/
+    class Produto {
+        int  id = null;
+        String f = null;
+        int  nl = null;
+        int  l1 = null;
+        int  l2 = null;
+        int  l3 = null;
+        int  l4 = null;
+        int  l5 = null;
+    }
                
+/* --------------------------------------------------------------------------------------------------------*/
 /*int i=0;//  //quebra de string antes da comparação por nao saber o id
              
     }int cont=0; figura[cont];
