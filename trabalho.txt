@@ -1,0 +1,22 @@
+Em um arquivo TXT (DadosFiguras.txt) estão dados sobre diversas figuras geométricas.
+Abaixo segue um trecho do arquivo:
+ID: 3
+F: QUA
+NL: 4
+L1: 4
+L2: 4
+L3: 4
+L4: 4
+ID : indica o identificador da figura.
+F: indica qual figura(TRI: triângulo; QUA: quadrado; RET: Retângulo; TRA: Trapézio)
+NL : indica o número de lados da figura.
+L1,L2, ... LN : indicam o comprimento dos lados da figura.
+
+
+
+1) Faça um programa que leia o arquivo TXT e insira as figuras em uma lista.
+2) Depois de inseridos na lista, mostre na tela o cálculo de suas áreas.
+3) Se a forma pentágono (PEN) for inserida no arquivo , altere a implementação para
+adicionar a funcionalidade.
+3) Se o usuário quiser, para os triângulos, classificá-los em equilátero, isósceles e escaleno.
+Como implementar esta funcionalidade?
